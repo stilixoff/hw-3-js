@@ -1,17 +1,38 @@
-function getMaxDigit() {
-    let number = prompt(`Введите число не меньше 10`);
-
-    while (number<10 || number - Math.floor(number) !==0) {
-        number = prompt(`Введите число не меньше 10`);
-    };
-
-    let maxNumber = n[0];
-
-    for (let i = 0; i < number.length; i++) {
-        
-    }
-
-    return console.log(number.length);;
+function getMaxDigit(number = 123456789) {
+    return Math.max(...(String(number)));
 }
 
-getMaxDigit();
+console.log(getMaxDigit());
+
+function powFunction (numberForPow, power) {
+    let sumPow = numberForPow;
+    for (let i = 1; i < power; i++) {
+        numberForPow *= sumPow;
+    }
+    return numberForPow;
+};
+
+console.log (powFunction(5, 3));
+
+function uppercase(word = 'oleH') {
+    let n = word[0].toUpperCase();
+    let z = word.slice(1, word.length).toLowerCase();
+    return n+z;
+}
+
+console.log (uppercase());
+
+function tax(cash, taxCash) {
+    let sum = cash - (cash * (taxCash / 100));
+    return sum;
+}
+
+console.log(tax(1000, 19.5));
+
+function randomNumber(min = 10, max = 100){
+    let x = Math.floor(min + Math.random() * (max + 1 - min));
+    return x;
+}
+
+console.log(randomNumber());
+
