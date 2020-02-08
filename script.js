@@ -36,3 +36,20 @@ function randomNumber(min = 10, max = 100){
 
 console.log(randomNumber());
 
+function countLetter(word = "Асталависта", letter = "а") {
+    let arrWord = word.toLowerCase().split('');
+    let SumLetter = 0;
+    for ( let i = 0; i < arrWord.length; i++) {
+        if (arrWord[i] === letter) {
+            SumLetter++;
+        };
+    }
+    return SumLetter;
+}
+
+console.log(countLetter());
+
+function convertCurrency(cash) {
+    
+}
+
