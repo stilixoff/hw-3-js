@@ -4,6 +4,20 @@ function getMaxDigit(number = 123456789) {
 
 console.log(getMaxDigit());
 
+const getMaxNumber = (number) => {
+    numbers = number.toString();
+    let res = 0;
+    for (let i = 0; i < numbers.length; i++) {
+        if(res < numbers[i]) {
+            res = numbers[i];
+        }
+    }
+
+    return res;
+}
+
+console.log(getMaxNumber(9213211515));
+
 function powFunction (numberForPow, power) {
     let sumPow = numberForPow;
     for (let i = 1; i < power; i++) {
@@ -95,7 +109,7 @@ console.log(isPalyndrom());
 
 
 
-document.writeln (`Создать функцию getMaxDigit(number) – которая получает любое число и выводит самую большую цифру в этом числе (123456789) = ${getMaxDigit()} <br>
+document.writeln (`Создать функцию getMaxDigit(number) – которая получает любое число и выводит самую большую цифру в этом числе (123456789) = ${getMaxDigit()} and second fun = ${getMaxNumber(123456789)} <br>
 Создать функцию, которая вычисляет степень числа. Не используя Math.pow и **. Используйте цикл. 5 в 3й степени = ${powFunction(5, 3)} <br>
 Создать функцию, которая форматирует имя, делая первую букву заглавной. oleH = ${uppercase()} <br>
 Создать функцию, которая вычисляет сумму оставшуюся после оплаты налога от заработной платы. 1000 и 19,5% = ${(tax(1000, 19.5))} <br>
